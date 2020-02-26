@@ -1,0 +1,40 @@
+﻿<Window x:Class="HeadHunterWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HeadHunterWPF"
+        mc:Ignorable="d"
+        Title="HeadHunter" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="13*"/>
+            <ColumnDefinition Width="86*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="SearchButton" Content="Поиск" HorizontalAlignment="Left" Margin="281.412,353,0,0" VerticalAlignment="Top" Width="177" Height="56" FontWeight="Bold" Click="SearchButton_Click" Grid.Column="1">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <TextBox x:Name="SearchTextBox" HorizontalAlignment="Left" Height="56" Margin="10,353,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="344" Text="Программист" FontSize="24" TextAlignment="Center" Grid.ColumnSpan="2">
+            <TextBox.Effect>
+                <DropShadowEffect/>
+            </TextBox.Effect>
+        </TextBox>
+        <Button Content="Открыть в браузере" HorizontalAlignment="Left" Margin="502,353,0,0" VerticalAlignment="Top" Width="166" Height="26" FontWeight="Bold" Click="Button_Click" Grid.Column="1">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <DataGrid x:Name="DataJson" HorizontalAlignment="Left" Height="338" Margin="10,10,0,0" VerticalAlignment="Top" Width="762" FrozenColumnCount="1" Grid.ColumnSpan="2" TouchDown="DataJson_TouchDown" TouchEnter="DataJson_TouchEnter" MouseDoubleClick="DataJson_MouseDoubleClick" SelectionMode="Single" SelectionUnit="Cell" SelectedCellsChanged="DataJson_SelectedCellsChanged">
+            <DataGrid.BindingGroup>
+                <BindingGroup/>
+            </DataGrid.BindingGroup>
+            <DataGrid.Effect>
+                <DropShadowEffect/>
+            </DataGrid.Effect>
+        </DataGrid>
+        <Label x:Name="LabelData" Content="--" Grid.Column="1" HorizontalAlignment="Left" Margin="502,384,0,0" VerticalAlignment="Top" Width="166"/>
+
+    </Grid>
+</Window>
